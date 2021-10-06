@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/8c2d0c6396.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uglem</title>
+</head>
+<body>
+    <header>
+        <div class="site-header">
+            <div class="site__branding">
+                <img src="#" alt="Logotype" title="Uglem Logotype">
+            </div>
+            <nav>
+                <div class="site__nav" id="nav-bar">
+                    <a href="#">About</a>
+                    <a href="#">Projekts</a>
+                    <a href="#">Contact</a>
+                    <a class="icon" onclick="burgerMenu()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+        <script>
+            function burgerMenu() {
+                let burger = document.getElementById("nav-bar");
+                if (burger.className === "site__nav") {
+                burger.className += " responsive";
+                } else {
+                burger.className = "site__nav";
+                }
+            }
+        </script>
+    </header>
+    
+</body>
+</html>
