@@ -3,38 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8c2d0c6396.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uglem</title>
+    <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="site-header">
             <div class="site__branding">
-                <img src="#" alt="Logotype" title="Uglem Logotype">
+                <a href="index.html">
+                    <picture>
+                        <source media="(max-width: 800px)" srcset="assets/logo-white.svg" widht="200px" height="76px">
+                        <source media="(min-width: 800px)" srcset="assets/logo-white.svg" widht="400px" height="152px">
+                        <img class="zoom" src="assets/logo-white.svg" alt="Logotype" title="Uglem Logotype">
+                    </picture>
+                </a>
             </div>
             <nav>
                 <div class="site__nav" id="nav-bar">
                     <a href="#">About</a>
                     <a href="#">Projekts</a>
                     <a href="#">Contact</a>
-                    <a class="icon" onclick="burgerMenu()">
-                        <i class="fa fa-bars"></i>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fas fa-bars"></i>
                     </a>
                 </div>
             </nav>
         </div>
         <script>
-            function burgerMenu() {
-                let burger = document.getElementById("nav-bar");
-                if (burger.className === "site__nav") {
-                burger.className += " responsive";
+            function myFunction() {
+                var x = document.getElementById("nav-bar");
+                if (x.className === "site__nav") {
+                x.className += " responsive";
                 } else {
-                burger.className = "site__nav";
+                x.className = "site__nav";
                 }
             }
         </script>
     </header>
+    <main>
+        <div class="about">
+            <div class="about__article">
+                <h2>LOREM ISPUM</h2>
+                <p></p>
+            </div>
+        </div>
+    </main>
     
 </body>
 </html>
