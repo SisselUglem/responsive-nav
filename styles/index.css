@@ -1,17 +1,10 @@
-html {
-    width: 100%;
-    margin: 0%;
-}
 
 body {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    display: flex;
-    max-width: 1140px;
-    width: 100%;
     background-color: black;
     color: white;
-    margin: auto;
+    margin: 0%;
     justify-content: center;
     background-image: url(../assets/bakgrund.webp);
     background-repeat: no-repeat;
@@ -19,19 +12,30 @@ body {
 }
 
 header {
+    display: flex;
+    flex-direction: column;
+    max-width: 1140px;
     width: 100%;
     padding-left: 4%;
     padding-right: 4%;
+    padding-top: 4%;
+    margin: auto;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 .site-header {
     width: 100%;
     float: left;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
 }
-
+.site__logo {
+    position: relative;
+}
 .site__nav {
     overflow: hidden;
 }
@@ -73,15 +77,15 @@ header {
     display: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
     body {
-        background-image: url(../assets/bakgrund-resp.webp);
+        background-image: url(../assets/bakgrund-resp2.webp);
         background-repeat: no-repeat;
         background-size: cover;
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .site__nav a {display: none;}
     
     .site__nav a.icon {
@@ -89,7 +93,7 @@ header {
         display: block;
     }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .site-header {
         align-items: unset;
     }
@@ -118,5 +122,60 @@ header {
     .site__nav a:hover {
         transform: none;
         transition: none;
+    }
+    .site__branding {
+        display: flex;
+        align-items: center;
+    }
+}
+/*end header*/
+/*main*/
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 1140px;
+    width: 100%;
+    padding-left: 4%;
+    padding-right: 4%;
+    margin: auto;
+}
+.site-slogan {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 100vh;
+}
+
+h1 {
+    display: grid;
+    grid-area: 2 / 3 / 2 / 5;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 55px;
+    letter-spacing: 5px;
+    text-align: right;
+    max-width: 400px;
+    width: 100%;
+}
+
+@media screen and (max-width: 700px) {
+    .site-slogan {
+        grid-template-rows: repeat(8, 1fr);
+    }
+    
+    h1 {
+        grid-area: 2 / 2 / 2 / 5;
+        font-size: 40px;
+        line-height: 45px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        grid-area: 2 / 2 / 2 / 5;
+        font-size: 25px;
+        line-height: 30px;
+        text-align: center;
     }
 }
